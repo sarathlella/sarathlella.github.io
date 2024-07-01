@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->\
+  <style>
+    .gnext, .gprev  {
+        display: none !important;
+    }
+    #features-list {
+      margin-left: 20px;
+    }
+    
+    #features-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    list-style-type: disc; /* Or any other style you prefer */
+}
+</style>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+    
+        // Example project data stored in an array or object
+        const projects = {
+            '1': {
+                title: 'Automated Document Management System',
+                client: 'BNY Mellon',
+                description: 'Developed an advanced document management and transfer system using Angular, TypeScript, and Node.js. This system automates document handling, improving integration, operational efficiency, and customer service quality.',
+                featuresText: 'Automated document processing and transfer.Enhanced UI/UX with advanced routing and lazy loading techniques.Comprehensive API integrations for seamless data synchronizationComprehensive API integrations for seamless data synchronization.Secure data handling and storage using Azure Blob Storage',
+                imagePath: 'assets/img/portfolio/portfolio-1.jpg'
+            },
+            '2': {
+                title: 'Inventory Management System',
+                client: 'Freelance',
+                description: ' Designed an inventory management system to streamline warehouse operations, providing real-time tracking, automated stock updates, and reporting features.',
+                featuresText: 'Real-time inventory tracking.Automated stock updates and notifications.Comprehensive reporting and analytics.Comprehensive reporting and analytics',
+                imagePath: 'assets/img/portfolio/portfolio-2.jpg'
+            },
+            '3': {
+                title: 'Bonus Commission System',
+                client: 'Hansa Solutions',
+                description: ' Developed a sophisticated system for configuring bonus commission structures, providing administrators with enhanced flexibility and control. The system enables dynamic customization and reliable data processing.',
+                imagePath: 'assets/img/portfolio/portfolio-3.jpg',
+                featuresText:'Customizable interface for defining commission rules.Integration with backend systems for reliable data handling.Automated processing of commission data.Scalable architecture for handling complex commission structures'
+            },
+            '4': {
+                title: 'Twitter Live Data Analysis',
+                client: 'Hansa Solutions',
+                description: 'Developed a sophisticated real-time data analysis tool designed to monitor and analyze live Twitter data streams. This tool provides valuable insights into trending topics, sentiment analysis, and user engagement by leveraging advanced data streaming and natural language processing techniques. It enables businesses and researchers to stay informed about public opinion and emerging trends in real-time.',
+                imagePath: 'assets/img/portfolio/portfolio-4.jpg',
+                featuresText:'Real-Time Data Streaming: Continuously collects live tweets based on specified keywords, hashtags, or user handles, ensuring up-to-the-minute data.Analyzes the sentiment of tweets (positive, negative, neutral) to understand public mood and opinions regarding specific topics or events. Identifies and tracks trending topics and hashtags over time, providing insights into emerging trends and popular discussions.Natural Language Processing (NLP): Utilizes NLP techniques to process and analyze tweet content, extracting meaningful patterns and insights from text data'
+            }
+            ,
+            '5': {
+                title: 'Appointment Scheduling System',
+                client: 'Hansa Solutions',
+                description: 'Developed a healthcare appointment scheduling system that simplifies booking, reminders, and patient management for healthcare providers.',
+                imagePath: 'assets/img/portfolio/portfolio-5.jpg',
+                featuresText:'Easy-to-use appointment booking interface.Automated reminders for patients and providers.Patient management and history tracking.Secure data handling and compliance with healthcare regulations'
+            },
+            '6': {
+                title: 'Modular Dashboard for Financial Analytics',
+                client: 'BNY Mellon',
+                description: 'Developed a modular dashboard for financial analytics, allowing users to customize their data visualization experience. The dashboard offers dynamic layout management and responsive design.',
+                imagePath: 'assets/img/portfolio/portfolio-6.jpg',
+                featuresText:'Customizable data visualization options.Seamless integration with backend services.Comprehensive unit and integration testing.Enhanced user experience with responsive design'
+            },
+            '7': {
+                title: 'Movie Recommendation System',
+                client: 'Personal',
+                description: 'Developed a robust movie recommendation system that personalizes movie suggestions for users based on their preferences and viewing history. This system employs collaborative filtering, content-based filtering, and hybrid recommendation techniques to deliver highly relevant and accurate movie recommendations.',
+                imagePath: 'assets/img/portfolio/portfolio-7.jpg',
+                featuresText:'Analyzes user behavior and preferences to recommend movies that similar users have enjoyed, leveraging user-item interaction data.Suggests movies based on the features of the movies that a user has previously liked, such as genre, director, cast, and keywords.Tailors movie suggestions to individual user profiles, taking into account their unique tastes and viewing history.Designed to handle large datasets and high volumes of user interactions, making it suitable for extensive user bases.'
+            },
+            '8': {
+                title: 'Dynamic E-commerce Platform',
+                client: 'Personal',
+                description: 'Created a dynamic e-commerce platform that provides a seamless shopping experience with advanced search and filtering options, secure payment processing, and user-friendly design.',
+                imagePath: 'assets/img/portfolio/portfolio-8.jpg',
+                featuresText:'Advanced search and filtering for product discovery.Secure and efficient payment processing.User-friendly design with responsive layout.Backend integration for inventory and order management'
+            },
+            '9': {
+                title: 'Customer Feedback and Survey Tool',
+                client: 'Freelance',
+                description: ' Created a customer feedback and survey tool that allows businesses to gather and analyze customer opinions to improve their services and products.',
+                imagePath: 'assets/img/portfolio/portfolio-9.jpg',
+                featuresText:'Customizable survey creation.Real-time feedback collection and analysis.Reporting and insights generation.Integration with customer relationship management systems'
+            }
+            // Add more projects as needed
+        };
+    
+        // Fetch the project data based on ID and update the DOM
+        if (projects[projectId]) {
+            const project = projects[projectId];
+            document.getElementById('project-title').textContent = project.title;
+            document.getElementById('project-client').textContent = project.client;
+            document.getElementById('project-description').textContent = project.description;
+            document.getElementById('project-image').src = project.imagePath;
+            document.getElementById('project-image').alt = 'Image of ' + project.title;        document.getElementById('project-image').src = project.imagePath;
+            document.getElementById('project-image').alt = 'Image of ' + project.title;
+
+            var features = project.featuresText.split('.');
+
+            // Get the 'ul' element where the list will be displayed
+            var featuresList = document.getElementById('features-list');
+
+            // Loop through the features array to create and append 'li' elements
+            features.forEach(function(feature) {
+                if (feature.trim().length > 0) {  // Check if the feature is not just an empty string
+                    var li = document.createElement('li');
+                    li.textContent = feature.trim();  // Trim any leading or trailing whitespace
+                    featuresList.appendChild(li);
+                }
+            });                         
+        } else {
+            document.querySelector('.portfolio-details').innerHTML = '<p>Project not found.</p>';
+        }
+    });
+    </script>
+</head>
+
+<body>
+
+  <main id="main">
+    <div class="portfolio-details">
+      
+      
+      
+     
+  </div>
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <h2  class="portfolio-title">Project Details</h2>
+
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img id="project-image" src="" alt="Project Image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            
+
+          </div>
+
+          <div class="col-lg-8 portfolio-info">
+            <h2 id="project-title"></h2>
+            <ul>
+              <li><strong>Client: </strong><span id="project-client"></span></li>
+            </ul>
+            <br>
+            <h3>Description</h3>
+            <p id="project-description"></p>
+            <br>
+            <div id="key-features">
+              <h3>Key Features</h3>
+              <ul id="features-list"></ul>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
