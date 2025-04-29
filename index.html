@@ -27,6 +27,11 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
+    #header .typed {
+  color: #18d26e;
+  font-weight: 600;
+}
+
     .gnext, .gprev  {
         display: none !important;
     }
@@ -113,7 +118,7 @@
   <div class="container">
 
     <h1><a href="index.html">Sarath Lella</a></h1>
-    <h2>I'm a passionate <span>AI/ML Engineer | Generative AI | MLOps | Cloud Architect</span></h2>
+<h2>I'm a passionate AI/ML Engineer, working in <span class="typed" data-typed-items="Generative AI, LLMs, MLOps - Cloud, HealthCare AI"></span></h2>
 
     <nav id="navbar" class="navbar">
       <ul>
@@ -755,6 +760,16 @@
     });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  new Typed('.typed', {
+    strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 1500,
+    loop: true
+  });
+</script>
 
 </body>
 
