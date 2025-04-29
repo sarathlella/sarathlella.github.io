@@ -1,0 +1,30 @@
+[
+  {
+    "title": "IDC Breast Cancer Detection",
+    "subtitle": "Patch-level CNN Ensemble",
+    "image": "assets/img/portfolio/portfolio-1.jpg",
+    "github": "https://github.com/sarathlella/idc-breast-cancer-fusion-cnn",
+    "category": "filter-app"
+  },
+  {
+    "title": "Heart Disease Risk Predictor",
+    "subtitle": "SHAP Explainability + ML",
+    "image": "assets/img/portfolio/portfolio-2.jpg",
+    "github": "https://github.com/sarathlella/Heart-Disease-Risk-Prediction",
+    "category": "filter-app"
+  },
+  {
+    "title": "DoctorGPT",
+    "subtitle": "LLM + RAG Medical Chatbot",
+    "image": "assets/img/portfolio/portfolio-3.jpg",
+    "github": "https://github.com/sarathlella/doctor-gpt",
+    "category": "filter-app"
+  },
+  {
+    "title": "Early Diabetes Detection",
+    "subtitle": "Wearable-style ML Pipeline",
+    "image": "assets/img/portfolio/portfolio-4.jpg",
+    "github": "https://github.com/sarathlella/early-diabetes-detection",
+    "category": "filter-app"
+  }
+]
