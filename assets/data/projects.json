@@ -1,11 +1,74 @@
 [
   {
     "title": "IDC Breast Cancer Detection",
-    "subtitle": "Patch-level CNN Ensemble",
+    "subtitle": "Patch-level CNN Ensemble with Explainability",
     "image": "assets/img/portfolio/portfolio-1.jpg",
     "category": "filter-app",
-    "description": "A deep learning project using EfficientNet, ResNet, and DenseNet to detect invasive ductal carcinoma (IDC) from histopathology images. Integrated GradCAM explainability and test-time augmentation to improve reliability.",
-    "technologies": ["Python", "TensorFlow", "PyTorch", "GradCAM", "CNN", "Kaggle"],
+    "description": "Deep learning-based classification of IDC breast cancer histopathology images using a Fusion CNN approach with explainable AI techniques. Focused on building robust, interpretable medical imaging models.",
+    "technologies": ["TensorFlow", "EfficientNet", "ResNet", "GradCAM", "TTA", "CNN"],
     "githubLink": "https://github.com/sarathlella/idc-breast-cancer-fusion-cnn"
+  },
+  {
+    "title": "Heart Disease Risk Prediction",
+    "subtitle": "Explainable Risk Scoring Model",
+    "image": "assets/img/portfolio/portfolio-2.jpg",
+    "category": "filter-app",
+    "description": "Machine learning model to predict heart disease risk with SHAP explainability. Trained using UCI dataset and deployed with insights into medical features influencing predictions.",
+    "technologies": ["Python", "Scikit-learn", "SHAP", "XGBoost", "Pandas"],
+    "githubLink": "https://github.com/sarathlella/Heart-Disease-Risk-Prediction"
+  },
+  {
+    "title": "Twitter Sentiment Dashboard",
+    "subtitle": "Live Twitter Data Pipeline",
+    "image": "assets/img/portfolio/portfolio-3.jpg",
+    "category": "filter-data",
+    "description": "End-to-end NLP dashboard for sentiment analysis using real-time Twitter data streams. Built with Jupyter notebooks, this project processes tweet text and visualizes sentiment distributions.",
+    "technologies": ["Tweepy", "NLTK", "TextBlob", "Matplotlib", "Pandas"],
+    "githubLink": "https://github.com/sarathlella/Live-twitter-data-analysis"
+  },
+  {
+    "title": "Movie Recommendation System",
+    "subtitle": "Big Data + Collaborative Filtering",
+    "image": "assets/img/portfolio/portfolio-4.jpg",
+    "category": "filter-data",
+    "description": "Built a collaborative filtering model to recommend movies based on user ratings. Applied on large movie rating dataset and visualized performance of predicted vs actual preferences.",
+    "technologies": ["Spark", "MLlib", "Python", "Pandas", "Surprise"],
+    "githubLink": "https://github.com/sarathlella/Movie-Recommendation-System"
+  },
+  {
+    "title": "Vegetable Image Classifier",
+    "subtitle": "Basic Image Recognition Model",
+    "image": "assets/img/portfolio/portfolio-5.jpg",
+    "category": "filter-cv",
+    "description": "Trained a CNN to classify vegetable images into categories using basic computer vision techniques and data augmentation.",
+    "technologies": ["Keras", "CNN", "ImageDataGenerator", "OpenCV"],
+    "githubLink": "https://github.com/sarathlella/VegetableImageClassification"
+  },
+  {
+    "title": "Tweet Analyzer (PB)",
+    "subtitle": "Jupyter NLP Demo",
+    "image": "assets/img/portfolio/portfolio-6.jpg",
+    "category": "filter-nlp",
+    "description": "An older notebook project for analyzing tweet text using Python and basic NLP methods.",
+    "technologies": ["Python", "Tweepy", "TextBlob", "NLTK"],
+    "githubLink": "https://github.com/sarathlella/Twitter_PB"
+  },
+  {
+    "title": "DoctorGPT (Coming Soon)",
+    "subtitle": "Medical Chatbot with RAG + LLMs",
+    "image": "assets/img/portfolio/portfolio-7.jpg",
+    "category": "filter-app",
+    "description": "Building a conversational AI for medical Q&A using Retrieval-Augmented Generation (RAG) and fine-tuned LLMs. Uses MedQuAD dataset and integrates LangChain workflows.",
+    "technologies": ["LangChain", "LLM", "RAG", "Hugging Face", "Python"],
+    "githubLink": ""
+  },
+  {
+    "title": "Diabetes Detection from Wearable Data (Coming Soon)",
+    "subtitle": "Early Risk Classifier with Simulated Features",
+    "image": "assets/img/portfolio/portfolio-8.jpg",
+    "category": "filter-app",
+    "description": "A classifier built to detect early-stage diabetes risk using wearable-style features from synthetic and real datasets. Goal is to integrate sensor-like data with ML models.",
+    "technologies": ["Scikit-learn", "XGBoost", "Python", "Pandas", "EDA"],
+    "githubLink": ""
   }
 ]
