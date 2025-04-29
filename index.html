@@ -639,6 +639,30 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  fetch('assets/data/projects.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('portfolio-projects');
+      data.forEach(project => {
+        const html = `
+          <div class="col-lg-4 col-md-6 portfolio-item ${project.category}">
+            <div class="portfolio-wrap">
+              <img src="${project.image}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>${project.title}</h4>
+                <p>${project.subtitle}</p>
+                <div class="portfolio-links">
+                  <a href="${project.github}" target="_blank" title="GitHub"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        container.insertAdjacentHTML('beforeend', html);
+      });
+    })
+    .catch(error => console.error('Error loading projects:', error));
+</script>
 
 </body>
 
