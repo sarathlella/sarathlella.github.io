@@ -31,6 +31,60 @@
         display: none !important;
     }
 </style>
+  <style>
+.portfolio-lightbox-content {
+  background-color: #000;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  color: #eee;
+  font-size: 16px;
+  line-height: 1.7;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-lightbox-content h2,
+.portfolio-lightbox-content h4 {
+  color: #18d26e;
+}
+
+.portfolio-lightbox-content ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-lightbox-content a.btn {
+  background-color: #18d26e;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.portfolio-lightbox-content a.btn:hover {
+  background-color: #12a858;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto !important;
+    position: static !important;
+  }
+  html {
+    overflow: auto !important;
+  }
+  .portfolio-lightbox-content {
+    max-width: 90vw;
+    font-size: 15px;
+  }
+}
+</style>
   <!-- =======================================================
   * Template Name: Personal
   * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
