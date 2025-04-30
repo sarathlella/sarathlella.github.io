@@ -75,33 +75,7 @@ body {
   text-decoration: none;
 }
 
-.portfolio-wrap {
-  position: relative;
-  overflow: hidden;
-  padding: 1.5rem;
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  height: 100%;
-}
 
-
-
-
-
-.project-tech {
-  color: #ccc;
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-
-    .project-title {
-  font-weight: 700;
-  font-size: 1.2rem;
-  background: linear-gradient(45deg, #18d26e, #00ffc6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .portfolio-links {
   position: absolute;
@@ -121,31 +95,69 @@ body {
   visibility: visible;
 }
 
-.hover-left,
-.hover-right {
+.portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  height: 100%;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #18d26e, #00ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-tech {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Hover Overlay Structure */
+.portfolio-hover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.portfolio-wrap:hover .portfolio-hover-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-half {
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #18d26e;
   gap: 10px;
 }
 
-.hover-left a,
-.hover-right a {
-  color: #18d26e;
-  font-size: 1.2rem;
+.hover-half a {
   text-align: center;
+  color: #18d26e;
   text-decoration: none;
+  font-weight: 600;
 }
 
-.hover-left a i,
-.hover-right a i {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+.hover-half a i {
+  font-size: 2rem;
+  margin-bottom: 5px;
 }
 
 
@@ -811,25 +823,29 @@ body {
       projects.forEach((project, index) => {
         const projectId = `project-${index}`;
 
-     const cardHTML = `
+   const cardHTML = `
   <div class="col-lg-4 col-md-6 portfolio-item ${project.category}">
-    <div class="portfolio-wrap">
+    <div class="portfolio-wrap hover-split">
       <div class="card-body">
         <h5 class="project-title">${project.title}</h5>
         <p class="project-tech">${project.technologies.join(', ')}</p>
       </div>
-      <div class="portfolio-links">
-        <a href="#${projectId}" class="glightbox" data-glightbox="inline" title="More Details">
-          <i class="bx bx-plus"></i>
-        </a>
-        <a href="${project.githubLink}" target="_blank" title="GitHub">
-          <i class="bx bx-link"></i>
-        </a>
+      <div class="portfolio-hover-overlay">
+        <div class="hover-half hover-left">
+          <a href="#${projectId}" class="glightbox" data-glightbox="inline" title="More Details">
+            <i class="bx bx-plus"></i>
+            <span>More Details</span>
+          </a>
+        </div>
+        <div class="hover-half hover-right">
+          <a href="${project.githubLink}" target="_blank" title="GitHub">
+            <i class="bx bx-link"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>`;
-
-
 
   const popupHTML = `
     <div id="${projectId}" class="portfolio-lightbox-content" style="display: none;">
