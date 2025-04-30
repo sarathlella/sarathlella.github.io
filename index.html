@@ -94,6 +94,11 @@ body {
   opacity: 1;
   visibility: visible;
 }
+.portfolio-item {
+  display: flex;
+}
+
+
 
 .portfolio-wrap {
   position: relative;
@@ -104,6 +109,10 @@ body {
   height: 100%;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 180px;
 }
 
 .project-title {
@@ -150,16 +159,20 @@ body {
 
 .hover-half a {
   text-align: center;
-  color: #18d26e;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .hover-half a i {
   font-size: 2rem;
   margin-bottom: 5px;
 }
-
+.hover-divider {
+    width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  height: 100%;
+}
 
 }
 
@@ -833,13 +846,14 @@ body {
       <div class="portfolio-hover-overlay">
         <div class="hover-half hover-left">
           <a href="#${projectId}" class="glightbox" data-glightbox="inline" title="More Details">
-            <i class="bx bx-plus"></i>
+            <i class="bx bx-plus"></i><br/>
             <span>More Details</span>
           </a>
         </div>
+         <div class="hover-divider"></div>
         <div class="hover-half hover-right">
           <a href="${project.githubLink}" target="_blank" title="GitHub">
-            <i class="bx bx-link"></i>
+            <i class="bx bx-link"></i><br/>
             <span>GitHub</span>
           </a>
         </div>
