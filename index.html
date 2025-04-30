@@ -78,6 +78,17 @@ body {
 .portfolio-lightbox-content a.btn:hover {
   background-color: #12a858;
   color: #000;
+  
+  .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  visibility: visible;
+}
 }
 
 @media (max-width: 768px) {
