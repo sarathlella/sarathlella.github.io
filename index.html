@@ -75,20 +75,43 @@ body {
   text-decoration: none;
 }
 
-.portfolio-lightbox-content a.btn:hover {
-  background-color: #12a858;
-  color: #000;
-  
-  .portfolio-wrap .portfolio-links {
+.portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.portfolio-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   visibility: visible;
 }
+
+.project-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.project-tech {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -751,23 +774,25 @@ body {
       projects.forEach((project, index) => {
         const projectId = `project-${index}`;
 
-        const cardHTML = `
-    <div class="col-lg-4 col-md-6 portfolio-item ${project.category}">
-      <div class="portfolio-wrap custom-card">
-        <div class="card-body">
-          <h5 class="project-title">${project.title}</h5>
-          <p class="project-tech">${project.technologies.join(', ')}</p>
-        </div>
-        <div class="portfolio-links">
-          <a href="#${projectId}" class="glightbox" data-glightbox="inline" title="More Details">
-            <i class="bx bx-plus"></i>
-          </a>
-          <a href="${project.githubLink}" target="_blank" title="GitHub">
-            <i class="bx bx-link"></i>
-          </a>
-        </div>
+     const cardHTML = `
+  <div class="col-lg-4 col-md-6 portfolio-item ${project.category}">
+    <div class="portfolio-wrap">
+      <div class="card-body">
+        <h5 class="project-title">${project.title}</h5>
+        <p class="project-tech">${project.technologies.join(', ')}</p>
       </div>
-    </div>`;
+      <div class="portfolio-links">
+        <a href="#${projectId}" class="glightbox" data-glightbox="inline" title="More Details">
+          <i class="bx bx-plus"></i>
+        </a>
+        <a href="${project.githubLink}" target="_blank" title="GitHub">
+          <i class="bx bx-link"></i>
+        </a>
+      </div>
+    </div>
+  </div>`;
+
+
 
   const popupHTML = `
     <div id="${projectId}" class="portfolio-lightbox-content" style="display: none;">
