@@ -1,5 +1,14 @@
 [
   {
+  "title": "DoctorPhi: Medical QA Prototype",
+  "subtitle": "High-Precision Medical QA with Phi-2 and BERTScore Reranking",
+  "description": "DoctorPhi v1 is a lightweight medical question-answering prototype built on Microsoft's Phi-2 language model. It features sentence-level BERTScore reranking to boost answer precision and is evaluated on MedQuAD with extensive visual diagnostics. Built entirely in Colab, it demonstrates that explainability and performance are possible on limited compute. DEMO: https://huggingface.co/spaces/sarathlella/doctorphi_v1",
+  "category": "filter-app",
+    "technologies": ["LLM", "phi-2", "HuggingFace", "Healthcare AI", "BERTScore", "QA", "Colab"],
+  "image": "assets/img/portfolio/doctorphi.jpg",
+  "githubLink": "https://github.com/sarathlella/doctorphi_v1"
+},
+  {
     "title": "IDC Breast Cancer Detection",
     "subtitle": "Patch-level CNN Ensemble with Explainability",
     "image": "assets/img/portfolio/portfolio-1.jpg",
@@ -52,15 +61,6 @@
     "description": "An older notebook project for analyzing tweet text using Python and basic NLP methods.",
     "technologies": ["Python", "Tweepy", "TextBlob", "NLTK"],
     "githubLink": "https://github.com/sarathlella/Twitter_PB"
-  },
-  {
-    "title": "DoctorGPT (Coming Soon)",
-    "subtitle": "Medical Chatbot with RAG + LLMs",
-    "image": "assets/img/portfolio/portfolio-7.jpg",
-    "category": "filter-app",
-    "description": "Building a conversational AI for medical Q&A using Retrieval-Augmented Generation (RAG) and fine-tuned LLMs. Uses MedQuAD dataset and integrates LangChain workflows.",
-    "technologies": ["LangChain", "LLM", "RAG", "Hugging Face", "Python"],
-    "githubLink": ""
   },
   {
     "title": "Diabetes Detection from Wearable Data (Coming Soon)",
